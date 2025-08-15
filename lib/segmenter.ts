@@ -126,5 +126,11 @@ export function toMarkdownString(tree: any): string {
     .use(remarkFrontmatter as any)
     .use(remarkStringify as any)
     .stringify(tree as any);
-  return String(str);
+  let out = String(str);
+  // Unescape escaped asterisks inside LaTeX math blocks/spans so formulas render correctly
+  // $$ ... $$ (block math)
+  out = out.replace(/\$\$([\s\S]*?)\$\$/g, (_m, inner) => `$$${String(inner).replace(/\\\*/g, '*')}$$`);
+  // $ ... $ (inline math) — avoid crossing lines to reduce false positives
+  out = out.replace(/\$([^$\n]*?)\$/g, (_m, inner) => `$${String(inner).replace(/\\\*/g, '*')}$`);
+  return out;
 }
