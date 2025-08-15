@@ -23,10 +23,10 @@ const DEFAULT_SETTINGS: AppSettings = {
   apiKey: undefined,
   apiBase: undefined,
   options: {
-    translateLinkText: true,
+    translateLinkText: false,
     translateImageAlt: false,
     preserveEmptyLines: true,
-    spellcheck: true,
+    spellcheck: false,
     punctuationLocale: undefined,
   },
   glossary: [],

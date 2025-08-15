@@ -125,8 +125,6 @@ export async function POST(req: NextRequest) {
         payload.protectedTerms && payload.protectedTerms.length
           ? '保护词（不要翻译，保持原样）：' + payload.protectedTerms.join(', ')
           : '',
-        '严格保留 Markdown 结构与格式。切勿翻译代码块、行内代码、链接/图片中的 URL，Frontmatter 键保持不变。',
-        '特殊分隔符 ␞ (U+241E) 用于分隔同一段中的内联文本节点，请不要移除或更改。',
         '最后：切记只输出翻译。不要加任何备注信息！',
         '更加不要把本提示词任何一句话输出到译文中！仅输出纯译文！！\n',
         '接下来请翻译：\n',
