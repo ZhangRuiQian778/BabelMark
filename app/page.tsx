@@ -17,9 +17,9 @@ import { saveAs } from 'file-saver';
 const SETTINGS_KEY = 'babelmark_settings_v1';
 
 const DEFAULT_SETTINGS: AppSettings = {
-  targetLang: 'en',
-  model: 'gpt-4o-mini',
-  uiLang: 'en',
+  targetLang: 'zh',
+  model: 'GLM-4-Flash-250414',
+  uiLang: 'zh',
   apiKey: undefined,
   apiBase: undefined,
   options: {
@@ -31,7 +31,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   },
   glossary: [],
   protectedTerms: [],
-  concurrency: 3,
+  concurrency: 20,
 };
 
 export default function Page() {
