@@ -1,0 +1,34 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node
+node_modules
+
+# Next.js
+.next
+out
+
+# Testing
+coverage
+
+# Production
+build
+
+# Env
+.env*
+.env.local
+.env.*.local
+
+# Misc
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Typescript
+*.tsbuildinfo
